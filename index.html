@@ -4,7 +4,6 @@
 <meta charset="utf-8" />
 <meta content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no" name="viewport" />
 <title>Badland</title>
-<script src="./hooks.js"></script>
 <style>
    html,
          body {
@@ -31,7 +30,40 @@
              touch-action: none;
              -ms-content-zooming: none;
          }
+        #pleaserotate-graphic{
+                fill: #fff;
+            }
+
+        #pleaserotate-backdrop {
+                color: #fff;
+                background-color: #000;
+        }
   </style>
+<script>
+            var PleaseRotateOptions = {
+                startOnPageLoad: true,
+                onHide: function(){},
+                onShow: function(){},
+                forcePortrait: false,
+                message: "",
+                subMessage: "",
+                allowClickBypass: false,
+                onlyMobile: true,
+                zIndex: 1000,
+                iconNode: null
+            };
+            function e(e){let t=e+"=",i=decodeURIComponent(document.cookie).split(";");for(let e=0;e<i.length;e++){let l=i[e];for(;" "==l.charAt(0);)l=l.substring(1);if(0==l.indexOf(t))return l.substring(t.length,l.length)}return""}let t=e("is_visited");""!=t?console.log("visited!"):(alert("Please visit the game list page first!"),location.href="/html5-games");
+    </script>
+<script src="/scripts/pleaserotate.min.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SX3SJWCLEY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SX3SJWCLEY');
+</script>
 </head>
 <body>
 <canvas id="canvas">
@@ -43,6 +75,6 @@
    window.WebSdkGame(window)
                .catch(console.error);
   </script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"7227cfb8cea42aa5","version":"2022.6.0","r":1,"token":"1646abcce58241b1aef359d9d36b339d","si":100}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"75e384ddd81a6330","version":"2022.10.3","r":1,"token":"1646abcce58241b1aef359d9d36b339d","si":100}' crossorigin="anonymous"></script>
 </body>
 </html>
